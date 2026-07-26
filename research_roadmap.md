@@ -1,0 +1,36 @@
+# Research Exploration
+
+## Quantum Communication
+- [ ] BB84
+- [ ] E91
+- [ ] Satellite QKD Review
+- [ ] Adaptive QKD
+- [ ] ML for QKD
+
+## Quantum Simulation
+
+- [ ] Georgescu Review
+- [ ] Hamiltonian Simulation
+- [ ] Trotterization
+- [ ] QDrift
+- [ ] Digital vs Analog
+
+## Algorithms
+
+- [ ] VQE
+- [ ] QAOA
+- [ ] Phase Estimation
+- [ ] Quantum Walks
+
+## Software Engineering
+
+- [ ] Qiskit Runtime
+- [ ] Transpiler
+- [ ] Compiler Optimization
+- [ ] Error Mitigation
+
+## AI + QC
+
+- [ ] LLM for Quantum Programming
+- [ ] RL Circuit Optimization
+- [ ] ML Error Mitigation
