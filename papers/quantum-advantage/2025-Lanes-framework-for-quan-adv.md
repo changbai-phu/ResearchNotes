@@ -1,26 +1,30 @@
 # Title: A framework for quantum advantage
 Authors:  O. Lanes, M. Beji et al 
 Year:  2025
-Institute: IBM Quantum, PASQAL SAS
+Venue: IBM Quantum, PASQAL SAS
 Link:  https://arxiv.org/html/2506.20658v2#S2 
 
 
 ## One-sentence summary
-This paper provides a framework for quantum advantage which has two criterias, validation and quantum separation, to create a **verifiable** and **platform-agnostic** standard. 
+This paper provides a framework for quantum advantage which has two criterias, **validation** and **quantum separation**, to create a **verifiable** and **platform-agnostic**(platfrom-independent) standard. 
 
 ## Problem
 The term "quantum advantage" is currently blurred and lacks a functional, verifiable definition. 
 
 ## Motivation
-To provide a rigorous benchmark of quantum technological progress and find real-world applications with near-term impact. 
+To provide a rigorous benchmark of quantum technological progress and identify real-world applications with near-term impact. 
 
 ## Evidence
-The authors support their framwework by identifying **3 key families of computational problems** that is promising for quantum advantages: sampling algorithms, variational principle, and expectation values of obserables. 
+The authors support their framwework by identifying **3 key families of computational problems** and current hardware progresss.
+- The 3 families of problems: sampling algorithms, variational principle, and expectation values of obserables.
+- Hardware readiness: Modern superconducting and neutral-atom architectures have reached a critical scale (>100 qubits) that allows for the execution of circuits beyond the reach of brute-force classical simulation. 
+- Furthermore, quantum-centric supercomputing (QCSC) is the hybrid approach that can be evidence of near-term advantage. 
 
 
 ## Questions
-Authors state that "Any claim of quantum advantage should be framed as a *falsifiable* scientific hypothsis". 
-Becuase quantum advantage is more like a sequence of increasingly robust demonstrations, and classical approach that may supersede? replace a claimed quantum advantage benchmark, this is a on-going process instead of a stable fixed standard of quantum advantage. 
+Becuase quantum advantage is a dynamic, iterative process, and classical algorithms are keep improving that may supersede a quantum advantage claim, this is a on-going process instead of a stable fixed standard for quantum advantage, where claims must be treated as falsifiable hypotheses.   
+Current random tests like RCS (Random circuit sampling) as a benchmark is limited by its lack of a scalable verification protocol, which failing the "validation" criterion of the proposed framework. 
+
 
 
 ## Notes-taken
@@ -33,9 +37,19 @@ Two criterias for Quantum Advantage:
 2. Quantum separation: a quantum computer solves a problem faster, cheaper, or more accurately than classical computers, but because classical methods keep getting better and we lack absolute mathematical proofs, that lead must be continuously tested and proven over time.
   
 Three key problem families:
-1. sampling problems - generate probability distributions
+1. sampling problems - generate probability distributions (e.g, Shor's algorithm, QAOA)
 2. variational principle problems - find ground states
 3. expectation values of observables - measure physical properties of quantum systems
-
+  
+Elements for advantage:
+1. Accurate circuits
+   1. Error correction
+   2. Error mitigation
+   3. Error detection
+2. QCSC (Quantum-centric supercomputing)
+3. Performant quantum processors
+   1. Superconducting qubits
+   2. Neutral atoms
+  
 Real world deployment:
 - HPC centers like GENCI and Jülich
