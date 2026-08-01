@@ -1,15 +1,15 @@
 # Title: Quantum Simulation
-Authors:  I.M.Georgescu, S.Ashhab, Franco Nori
-Year:  2014
-Institute: RIKEN; Qatar Environment and Energy Research Institute; University of Michigan
-Link: https://arxiv.org/pdf/1308.6253 
+Authors:  I.M.Georgescu, S.Ashhab, Franco Nori  
+Year:  2014  
+Institute: RIKEN; Qatar Environment and Energy Research Institute; University of Michigan  
+Link: https://arxiv.org/pdf/1308.6253   
 
 
 ## One-sentence summary
 This is a review that outlines the theoretical foundations and experimental progress of quantum simulation, arguing for its role as a primary computational tool in the transition toward full quantum advantage. 
 
 *Definition*:   
-Quantum simulation is using a controllable quantum system, involves the mapping between a target quantum system and the controallable laboratory device, to simulate/emulate the target's dynamics or properties.
+Quantum simulation is using a controllable quantum system, involves the mapping between a target quantum system and the controllable laboratory device, to simulate/emulate the target's dynamics or properties.
 
 
 ## Problem - claim
@@ -17,33 +17,47 @@ Specialized quantum simulators offer a more immediate and feasible path to overc
 
 *Notes*:  
 Computer memory needed to store the quantum state is huge. Number of operations increases exponentially with the size of the system. -- *Exponential Explosion* is unavoidable, even approximation methods have limits.   
-Use quantum computer to run/store quantum states, because itself would have the capacity to deal with that without using exponentially large amout of physical resources. (Feynman)  
+Use quantum computer to run/store quantum states, because itself would have the capacity to deal with that without using exponentially large amount of physical resources. (Feynman)  
 
 
 ## Motivation
-The motivation comes from the maturation of coherent control technologies, and the missing of a multidisplinary reference to provide a comprehansive introduction to quantum simulation across physics, chemistry and biology. 
+The motivation comes from the maturation of coherent control technologies, and the missing of a multi-disciplinary reference to provide a comprehensive introduction to quantum simulation across physics, chemistry and biology. 
+More importantly, quantum simulation has a great potential to revolutionize research by providing a verifiable tool for exploring physical regimes that are currently inaccessible to both classical computation and direct experimentation. 
 
-*Notes*:
+
+*Notes*:  
 Quantum simulation gains attentions recently because of 2 reasons (twofold): potential applications of quantum simulation, and the technologies required for hte coherent control have matured enough for physical implementation of QS.   
-Quantum Simulation can provide insights into new physical phenomena, help solve difficult quantum many-body problems, bring postivie impact on the development of other fields other thatn just in quantum, and will provide a new tool for testing physical theories.
+Quantum Simulation can provide insights into new physical phenomena, help solve difficult quantum many-body problems, bring positive impact on the development of other fields other than just in quantum, and will provide a new tool for testing physical theories.
 
 
 ## Evidence - support the claim
+Scientists have already simulate the quantum phase transition from a superfluid to a Mott insulator using a cold atomic gas in an optical lattice, and implement digital quantum simulation protocols using trapped-ion chains. (successful proof-of-principle experiments)
+
+*Notes*:
+- Physical realizations: (hardware evidence)
+  -  Neutral atoms in an optical lattice is possible to perform quantum simulations with more than a few particles. (though individual control and readout is not yet available) - (VI, section F) 
+     -  simulation of the quantum phase transition from a superfluid to a Mott insulator using a cold atomic gas in an optical lattice (Greiner et al., 2002).
+     -  A theoretical review (Lewenstein et al., 2007) discusses in detail atoms in optical lattices as potential quantum simulators.
+  - DQS has been realized with trapped ions. (though with no error correction, the fidelity of the DQS implementation was lower than for the AQS implementation.)
+- Applications: (theoretical evidence)
 
 
 ## Questions - weaken
-(Experimental)
+The claim is weakened by technical limitations, for instance the controllability and scalability of quantum simulators, and the problem rises about accuracy with scaling the system size, in other words, the precision in a given quantum simulation is another important question. 
+
+*Notes*:  
+(Experimental)  
 - controllability and scalability of quantum simulators
-- different approaches have each own pros and cons 
-(Theoretical)
+- different approaches have each own pros and cons   
+(Theoretical)  
 - further studies of decoherence and control
 
 
 ## Notes-taken
 Quantum simulation will provide a valuable tool for researchers in many fields:
-e.g, condensed matter physics -- QS allow the study of many difficult problems like quantum phase transitions, quantum magnetism or high-Tc supercvonductivity.
+e.g, condensed matter physics -- QS allow the study of many difficult problems like quantum phase transitions, quantum magnetism or high-Tc superconductivity.
 Other potential areas: high-energy physics, quantum chemistry, cosmology, nuclear physics.
-
+  
 Latest advances in th coherent manipulation:
 - atoms in optical lattices
 - trapped ions
@@ -55,9 +69,43 @@ Latest advances in th coherent manipulation:
 - Digital quantum simulation
 - Analog quantum simulation
 - Quantum-information-inspired algorithms for the classical simulation of quantum systems
+  
+Resource estimation and fault tolerance
+- Resource estimation
+- Decoherence and errors
 
 
-## Related papers
+Physical realizations: (hardware evidence)
+  - Atoms and ions 
+    - Neutral atoms in optical lattices for mimicking solid-state systems
+    - optics lattices - tunable and defect-free
+  - Nuclear and electronic spins
+  - Superconducting circuits
+  - Photons
+  - Other systems 
+    
+Applications: (theoretical evidence)
+  - Condensed-matter physics
+    - Hubbard model
+    - spin models
+    - quantum phase transitions
+    - disordered and frustrated systems
+    - spin glasses
+    - superconductivity
+    - meta-materials
+    - topological order
+  - High-energy physics
+  - Cosmology
+  - Atomic physics
+  - Quantum chemistry
+  - Open quantum systems
+  - Quantum chaos
+  - Nuclear physics
+  - Interferometry
+  - Other applications
+
+
+## Some related papers/ papers mentioned
 adiabatic quantum computation(Farhi et al., 2001),   
 measurement-based quantum computation (Raussendorf et al., 2003),   
 topological quantum computation (Kitaev, 2003)   
