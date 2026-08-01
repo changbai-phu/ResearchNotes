@@ -10,6 +10,7 @@ This is a review that outlines the theoretical foundations and experimental prog
 
 *Definition*:   
 Quantum simulation is using a controllable quantum system, involves the mapping between a target quantum system and the controllable laboratory device, to simulate/emulate the target's dynamics or properties.
+*Revised*: Quantum simulation is the use of a controllable quantum system—often acting as a specialized "stepping stone" before universal quantum computers—to mimic and study the behavior of other complex systems that are too difficult for classical computers to handle.
 
 
 ## Problem - claim
