@@ -3,6 +3,7 @@ Authors:  I.M.Georgescu, S.Ashhab, Franco Nori
 Year:  2014  
 Institute: RIKEN; Qatar Environment and Energy Research Institute; University of Michigan  
 Link: https://arxiv.org/pdf/1308.6253   
+Document: [2014_Georgescu_Quantum_Simulation](resources/papers_download/QS_2014_Georgescu_QuantumSimulation.pdf)
 
 
 ## One-sentence summary
