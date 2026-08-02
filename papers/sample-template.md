@@ -11,10 +11,10 @@ Link:
 
 
 ## One-sentence summary
-
+What is this paper?
 
 ## Problem
-what problem are they solving? / what is the claim?
+what problem are they solving? / what is the claim? /What is the specific argument they are proving?
 
 
 ## Evidence
@@ -22,7 +22,7 @@ what evidence supports the claim?
 
 
 ## Motivation
-why important?
+why important? / Why does this specific argument matter to the world?
 
 
 ## Questions
