@@ -9,7 +9,7 @@
 
 ## Quantum Simulation
 
-- [ ] Georgescu Review
+- [x] Georgescu Review
 - [ ] Hamiltonian Simulation
 - [ ] Trotterization
 - [ ] QDrift
@@ -17,7 +17,7 @@
 
 ## Algorithms
 
-- [ ] VQE
+- [x] VQE
 - [ ] QAOA
 - [ ] Phase Estimation
 - [ ] Quantum Walks
