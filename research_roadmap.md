@@ -1,5 +1,29 @@
 # Research Exploration
 
+## Track 1
+VQE
+ ↓
+VQE review
+ ↓
+QAOA
+ ↓
+Error mitigation
+ ↓
+Quantum simulation
+
+## Track 2
+BB84
+ ↓
+E91
+ ↓
+Quantum repeaters
+ ↓
+Quantum internet architecture
+ ↓
+Satellite QKD
+
+
+
 ## Quantum Communication
 - [ ] BB84
 - [ ] E91
