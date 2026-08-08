@@ -52,8 +52,12 @@ Concepts:
   - QEM (mitigation)
     - effectively in current processors, asymptotic overhead cost scales exponentially
   - QEC
-- Overhead cost of fault tolerance
+- Fault tolerance & EC
   - **Surface code**
+    - high overhead cost
+  - High-rate quantum low-density parity-check (LDPC) codes
+  - Space design: trade time for space
+- Megaquop Machine
 
 ---
 
