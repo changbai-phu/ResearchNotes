@@ -18,24 +18,33 @@ This paper provide an overview of the VQAs, discuss how to overcome challenges i
 
 
 ## Problem - claim
+Current quantum devices have limitations on the size and noise, VQA that combines with a classical optimizers are now the leading approach for obtaining quantum advantage on NISQ devices.
 
-
+*Notes*:
+-  with an exponential speedup over classical methods, quantum algorithms could factor numbers, simulate quantum systems, or solve linear systems of equations. (Intro)
+- Constraints: limited numbers of qubits, limited connectivity of the qubits, and coherent
+and incoherent errors that limit quantum circuit depth.(Intro)
+- VQAs leverage the toolbox of classical optimization, since VQAs use **parametrized quantum circuits** to be run on the quantum computer, and then
+outsource the parameter optimization to a **classical optimizer**. This approach has the added advantage of keeping the quantum circuit depth **shallow** and hence mitigating noise, in contrast to quantum algorithms developed for the fault-tolerant era. (Intro)
 
 
 ## Motivation
-
+Classical computers have high computational cost to solve large-scale problem or simulate quantum systems. Due to the limitations of current NISQ devices, VQAs that can make use of shallow quantum circuit and mitigate noise, becomes a promising solution before fault-tolerant quantum devices.
 
 
 
 ## Evidence - support the claim
 
 
+*Notes*:
+-  Current state-of-the-art device size ranges from 50 to 100 qubits which allows one to achieve ‘quantum supremacy’: outperforming the best classical supercomputer, for certain contrived mathematical tasks. (Intro)
+
 
 ## Questions - weaken
 
 
 *Notes*:  
-
+- challenges remain including the trainability, accuracy, and efficiency of VQAs. (Abstract)
 
 
 ## Notes-taken
