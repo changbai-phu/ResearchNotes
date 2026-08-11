@@ -37,23 +37,32 @@ Many important scientific problems are too expensive for even the best supercomp
 
 
 ## Evidence - support the claim
-One of the evidences is using VQE to estimate eigenstate and eigenvalues of a given Hamiltonian. Unlike previous adiabatic state preparation and quantum phase estimation quantum algorithms that require hardware beyond current reach, the variational quantum eigensolver (VQE) provides a near-term solution. 
-The other evidence is using VQE to simulate the dynamical evolution of a quantum system. Conventional approach like Trotter-Suzuki product formation, the circuit depth grows polynomially with the system size, VQAs only use a shallow circuit depth.  
-Others like using a VQA to solve a classical optimization problem - QAOA.
+- One of the evidences is using VQE to estimate eigenstate and eigenvalues of a given Hamiltonian. Unlike previous adiabatic state preparation and quantum phase estimation quantum algorithms that require hardware beyond current reach, the variational quantum eigensolver (VQE) provides a near-term solution. 
+- The other evidence is using VQE to simulate the dynamical evolution of a quantum system. Conventional approach like Trotter-Suzuki product formation, the circuit depth grows polynomially with the system size, VQAs only use a shallow circuit depth.  
+- The QAOA is the another evidence, that applying VQAs to solve combinatorial problems, which has probale performance guarantees at p=1.
 
 *Notes*:
 -  Current state-of-the-art device size ranges from 50 to 100 qubits which allows one to achieve ‘quantum supremacy’: outperforming the best classical supercomputer, for certain contrived mathematical tasks. (Intro)
 -  There are many different applications of VQAs: error correction, compilation, machine learning, new frontiers like quantum info, quantum metrology, combinatorial optimization, dynamical simulations, finding ground states in quan chemistry and condensed matter, mathematical applications like factoring, systems of equations etc. (Figure 3)
 -  Previous quantum algorithms to find the ground state of a given Hamiltonian H were based on adiabatic state preparation and quantum phase estimation subroutines [104, 105], both of which have circuit depth requirements beyond those available in the NISQ era. Hence, the first proposed VQA, the Variational Quantum Eigensolver (VQE), was developed to provide a near-term solution to this task. (Applications)
--  Apart from static eigenstate problems, VQAs can also be applied to simulate the dynamical evolution of a quantum system. Conventional quantum Hamiltonian simulation algorithms, such as the Trotter-Suzuki product formula [117], generally discretize time into small time steps and simulate each time evolution with a quantum circuit. Therefore, the circuit depth generally increases polynomially with the system size and simulated time.
-Given the noise inherent in NISQ devices, the accumulated hardware errors for such deep quantum circuits can prove prohibitive. To address this, VQAs for dynamical quantum simulation only use a shallow depth circuit, significantly reducing the impact of hardware noise. (Applications)
+-  Apart from static eigenstate problems, VQAs can also be applied to simulate the dynamical evolution of a quantum system. Conventional quantum Hamiltonian simulation algorithms, such as the Trotter-Suzuki product formula [117], generally discretize time into small time steps and simulate each time evolution with a quantum circuit. Therefore, the circuit depth generally increases polynomially with the system size and simulated time. Given the noise inherent in NISQ devices, the accumulated hardware errors for such deep quantum circuits can prove prohibitive. To address this, VQAs for dynamical quantum simulation only use a shallow depth circuit, significantly reducing the impact of hardware noise. (Applications)
 - The most famous VQA for quantum-enhanced optimization is the QAOA [23], originally introduced to approximately solve combinatorial problems such as Constraint-Satisfaction (SAT) [127] and Max-Cut problems [128]. (Applications)
+- Applying Quantum Approximate Optimization Algorithm (QAOA) to classical optimization problems is widely considered to be one of the leading candidates for achieving quantum advantage on NISQ devices [131]. There are several reasons for this optimism. QAOA has provable performance guarantees [23, 282] for p = 1. In general, even p = 1 QAOA ansatz cannot be efficiently simulated on any classical device [283]. At the same time, QAOA performance can only improve by increasing p. (Opportunities)
+
 
 ## Questions - weaken
-
+- Barren Plateau: when try to solve bigger problems, it becomes harder to find the best settings. A huge number of measurements will be required. This cancel out the quantum advantage. 
+- Measurement efficiency: To get a useful result, the quantum computer must be run large number of times, which means the total time needed becomes a roadblock to practical use. 
+- Noise in hardware: hardware noise don't just cause wrong answers, they also make the problem look like random noise, making it impossible to train the algorithm or be optimized.
 
 *Notes*:  
 - challenges remain including the trainability, accuracy, and efficiency of VQAs. (Abstract)
+- When a given cost function C(θ) exhibits a BP, the magnitude of its partial derivatives will be, on average, exponentially vanishing with the system size [194]...in a BP one needs an exponentially large precision to resolve against finite sampling noise and determine a cost-minimizing direction, with this being valid independently of using a gradient-based [84] or gradient-free optimization method [195].  (Challenges)
+- Recently, it was shown in Ref. [202] that noise can induce barren plateaus, regardless of the ansatz employed. Here, the presence of noise acting throughout the circuit progressively corrupts the state towards the fixed point of the noise model, usually the maximally mixed state [203]. Such a phenomenon was shown to arise when the circuit depth needs to be linear (or larger) with the system size, meaning that it will affect many widely-used ansatzes. (Challenges)
+- Another requirement that must be met for VQAs to provide a quantum advantage is having an efficient way to estimate expectation values (and more general cost functions). The existence of BPs can exponentially increase the precision requirements needed for the optimization portion of VQAs, as discussed in the section on BPs, but even in the absence of such BPs these expectation value estimations are not guaranteed to be efficient. (Challenges)
+- In practice, it is typical to observe that noise slows down the training. For example, it was heuristically observed that the noise-free cost achieves lower values with noise-free training than with noisy training [96, 223, 229]. As discussed in the section on BPs, the intuition behind this slowing down is that the cost landscape is flattened, and hence gradient magnitudes are reduced, by the presence of incoherent noise [202, 230, 231]. More-over, gradients decay exponentially with the algorithm’s depth, meaning that the deeper the circuit, the more it will be affected. This can be further understood from the fact that cost functions are typically extremized by pure states, and since incoherent noise reduces state purity, one expects this noise to erode the extremal points of the landscape [203]. (Challenges)
+- Effect of noise on cost evaluation. In Refs. [202, 203] it was also shown that in the presence of local Pauli noise, the cost landscape concentrated exponentially with the depth of the ansatz around the value of the cost associated with the maximally mixed state.(Challenges)
+
 
 
 ## Notes-taken
@@ -84,7 +93,47 @@ Basic concepts and tools & Applications:
     - Simulating open systems
   - Optimization
     - QAOA
-  - 
+  - Mathematical applications
+    - Linear systems
+    - Matrix-vector multiplication
+    - Non-linear equations
+    - Factoring
+    - Principal Component Analysis
+  - Compilation and unsampling
+    - Full unitary matrix compiling (FUMC)
+    - Fixed input state compiling (FISC)
+  - Error correction
+  - ML and data science
+    - classifier
+    - autoencoders
+    - generative models
+    - variational quantum generators
+    - quantum neural network architectures
+  - New frontiers
+    - quantum foundations
+    - quantum information theory
+    - entanglement spectroscopy
+    - quantum metrology
+
+Challenges and potential solutions:  
+- Trainability
+  - Barren plateaus (BP)
+  - Ansatz and initialization strategies 
+    - 2 approaches to prevent BPs:
+      - Parameter initialization
+      - Ansatz strategies
+- Efficiency
+  - commuting sets of operators
+  - optimized sampling
+  - classical shadows
+  - neural network tomography
+- Accuracy
+  - impact of hardware noise
+    - effect on noise on training
+    - on cost evaluation
+  - noise resilience
+  - error mitigation
+
 Outlook section:   
 - Better methods to analyze VQA scalability, including gradient scaling and other scaling aspects, such as the density of local minima and the shape of the cost landscape. 
 - Better application specific ansatzes will enhance gradient magnitudes to improve trainability, and reduce the impact of noise on VQAs, include adaptive ansatz strategies. Hybrid quantum-classical models.
@@ -102,3 +151,4 @@ Outlook section:
 
 
 ## Interesting 
+QAOA and VQE work great on small scales and have optimal theoretical roots, but as soon as scale them up to solve "real" problems,we will hit the **Barren Plateau** (can't find the answer) and the **Measurement Wall** (it takes too many repetitions to see the answer). That's why SQD (sample-based quantum diagonalization) comes to play.
