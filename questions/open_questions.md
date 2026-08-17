@@ -15,6 +15,7 @@ But Berezo states that: beware barren plateaus, measurement cost, noise, trainab
 - Why do I need so many measurements? 
 - What exactly is being measured?
 - What is SQD changing compared with VQE?
+- Barren plateaus seem to be a significant obstacle to scaling VQAs. What current approaches actually do about it?
 
 
 Near-term algorithms: VQE/QAOA/SQD  
