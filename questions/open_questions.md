@@ -21,3 +21,11 @@ But Berezo states that: beware barren plateaus, measurement cost, noise, trainab
 Near-term algorithms: VQE/QAOA/SQD  
 Foundational algorithms: Shor/Grover/QPE  
 Quantum communication: BB84/QKD  
+
+
+
+## query model
+- why query gates has to be unitary? 
+- how to overcome the physical limitations to make an unitary gate?
+  - query register
+  - target register using bitwise XOR  -> permutation matrix
