@@ -29,3 +29,13 @@ Quantum communication: BB84/QKD
 - how to overcome the physical limitations to make an unitary gate?
   - query register
   - target register using bitwise XOR  -> permutation matrix
+  
+
+## QKD
+* DV vs CV QKD
+* Why decoy-state BB84?
+* MDI-QKD
+* Numerical QKD security analysis
+* Major changes: practical QKD 2009 → 2026
+* Free-space vs fiber imperfections
+* Real-world QKD deployments
