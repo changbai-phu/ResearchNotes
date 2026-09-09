@@ -32,7 +32,10 @@ The name CPTP breaks down into two non-negotiable physical constraints:
 ## Channel capacity
 - Classical Capacity ($C$): How many classical bits (0s and 1s) can you reliably transmit per channel use? (e.g., Holevo bound / HSW theorem).
 - Quantum Capacity ($Q$): How many quantum states ($\lvert\psi\rangle$) or entangled pairs can you transmit without losing coherence? (e.g., Devetak / LSD theorem). $Q \le C$ always.
-  
+    
+To calculate a channel's quantum capacity (how much quantum information it can send reliably), we look at its coherent information.  
+For most quantum channels, sending messages in entangled blocks across multiple uses yields a higher transmission rate than sending messages one-by-one—a phenomenon called superadditivity. This makes general quantum capacity mathematically intractable because you have to calculate interactions across an infinite number of channel uses ($n \to \infty$).  
+
 ## Quantum Shannon theory
 In classical Shannon theory, information capacities are strictly additive. If Channel A can transmit 100 Mbps and Channel B can transmit 50 Mbps, using them together in parallel yields $100 + 50 = 150$ Mbps.
   
@@ -64,3 +67,13 @@ In Quantum Shannon Theory, capacity describes how much quantum information (or s
 In Quantum Shannon Theory, when papers say a channel capacity is "non-additive," they almost always mean super-additive ($C(A + B) > C(A) + C(B)$).  
 Quantum channel capacities do not suffer from sub-additivity because you always have the option to ignore entanglement between channel inputs and send independent states down Channel A and Channel B separately. Therefore, you can always guarantee at least $C(A) + C(B)$.  
 Because capacities can never drop below the additive baseline, the only way a capacity can be "non-additive" in practice is by being super-additive.
+
+## Degradable Channel
+Whenever you send a signal through a quantum channel, noise leaks some information to the surrounding environment. A channel is degradable if the signal received by the receiver (Bob) is strictly cleaner/more complete than what leaked to the environment (Eve), such that Eve's signal can be obtained merely by applying further noise ("degrading") to Bob's signal.
+- Key Property: In degradable channels, coherent information is additive. Using the channel $n$ times offers no quantum cheat code over using it once.
+- Why it matters: Because there is no superadditivity, you only need to analyze a single use of the channel to compute its exact quantum capacity.
+
+## Non-degradable Channel
+A channel is non-degradable if Bob's received output cannot be simply mapped to Eve's environmental output by adding local noise.
+- The Problem: In non-degradable channels, Bob and Eve receive complex, incomparable structures of information.
+- The Consequences: These channels usually exhibit superadditivity-—where sending entangled states across $2$ or $n$ parallel uses yields a higher capacity per use than a single run ($Q^{(1)}(\mathcal{N}^{\otimes n}) > n \cdot Q^{(1)}(\mathcal{N})$). This makes their quantum capacities extremely difficult to compute or bound.
