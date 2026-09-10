@@ -39,3 +39,10 @@ Quantum communication: BB84/QKD
 * Major changes: practical QKD 2009 → 2026
 * Free-space vs fiber imperfections
 * Real-world QKD deployments
+
+## Quan Algo
+* Adiabatic quantum computing
+* QAOA
+* Google Sycamore → classical simulation battle
+* Tensor-network simulation
+* Clifford+T simulation
